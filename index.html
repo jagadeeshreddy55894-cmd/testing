@@ -3,74 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Student Dashboard</title>
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-   <meta charset="UTF-8">
-    <title>My Page</title>
-
-    <link rel="stylesheet" href="stylish.css">
-   
-
 </head>
 <body>
 
-<header class="topbar">
+<!-- HEADER -->
+<header class="header">
 
-    <i class="fa-solid fa-bars menu"></i>
+    <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <h2>Dashboard</h2>
 
-    <div class="notify">
-        <i class="fa-regular fa-bell"></i>
-        <span>65</span>
+    <div class="notification">
+
+        <svg viewBox="0 0 24 24" width="25" height="25">
+            <path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V11a6 6 0 1 0-12 0v5L4 18v1h16v-1z"
+                fill="none"
+                stroke="#333"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+
+        <span class="count">65</span>
+
     </div>
 
 </header>
 
-
+<!-- TIMETABLE -->
 <section class="timetable">
 
-    <div class="head">
-        <h2>Today's Timetable</h2>
+    <div class="heading">
+
+        <h3>Today's Timetable</h3>
+
         <button>Your Dost</button>
+
     </div>
 
     <div class="cards">
 
-        <div class="tt-card">
-            <h3>PEAS10</h3>
+        <div class="card">
+
+            <h4>PEAS10</h4>
+
             <p>37-801</p>
 
-            <div class="time">09-10 AM</div>
+            <div class="time">
+                09-10 AM
+            </div>
+
         </div>
 
-        <div class="tt-card">
-            <h3>CSES001</h3>
+        <div class="card">
+
+            <h4>CSES001</h4>
+
             <p>26-507A</p>
 
-            <div class="time">10-11 AM</div>
+            <div class="time">
+                10-11 AM
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-
-<section class="tiles">
+<!-- ADD MORE -->
+<section class="dashboard">
 
     <div class="title">
 
         <div>
-            <h2>Add More Tiles</h2>
-            <p>Click on the plus button to add menu grids.</p>
+
+            <h3>Add More Tiles</h3>
+
+            <small>
+                Click on the plus button to add menu grids.
+            </small>
+
         </div>
 
         <div class="plus">
-            <i class="fa-solid fa-plus"></i>
+            +
         </div>
 
     </div>
@@ -79,91 +106,91 @@
 
         <div class="tile">
             <span class="badge">2</span>
-            <i class="fa-solid fa-bullhorn"></i>
-            <div>Announce</div>
+            <div class="icon">📢</div>
+            <div class="label">Announce</div>
         </div>
 
         <div class="tile active">
-            <i class="fa-solid fa-laptop"></i>
-            <div>Edu Revolution</div>
+            <div class="icon">💻</div>
+            <div class="label">Edu Revolution</div>
         </div>
 
         <div class="tile">
-            <i class="fa-regular fa-credit-card"></i>
-            <div>Fee Statement</div>
+            <div class="icon">💳</div>
+            <div class="label">Fee Statement</div>
         </div>
 
         <div class="tile">
             <span class="badge">61%</span>
-            <i class="fa-regular fa-clipboard"></i>
-            <div>Attendance</div>
+            <div class="icon">📋</div>
+            <div class="label">Attendance</div>
         </div>
 
         <div class="tile">
             <span class="badge">0</span>
-            <i class="fa-solid fa-list-check"></i>
-            <div>Assignment</div>
+            <div class="icon">📝</div>
+            <div class="label">Assignment</div>
         </div>
 
         <div class="tile">
             <span class="badge">7.38</span>
-            <i class="fa-solid fa-chart-column"></i>
-            <div>Results</div>
+            <div class="icon">📈</div>
+            <div class="label">Results</div>
         </div>
 
         <div class="tile">
             <span class="badge">0</span>
-            <i class="fa-regular fa-file-lines"></i>
-            <div>Exams</div>
+            <div class="icon">📄</div>
+            <div class="label">Exams</div>
         </div>
 
         <div class="tile">
-            <i class="fa-regular fa-calendar"></i>
-            <div>RMS Status</div>
+            <div class="icon">📅</div>
+            <div class="label">RMS Status</div>
         </div>
 
         <div class="tile">
-            <i class="fa-regular fa-calendar-days"></i>
-            <div>Events</div>
-        </div>
-
-        <div class="tile">
-            <span class="badge">X</span>
-            <i class="fa-solid fa-table"></i>
-            <div>View Marks</div>
+            <div class="icon">🎉</div>
+            <div class="label">Events</div>
         </div>
 
         <div class="tile">
             <span class="badge">X</span>
-            <i class="fa-solid fa-table-cells"></i>
-            <div>Time table</div>
+            <div class="icon">📊</div>
+            <div class="label">View Marks</div>
+        </div>
+
+        <div class="tile">
+            <span class="badge">X</span>
+            <div class="icon">🗓</div>
+            <div class="label">Time Table</div>
         </div>
 
     </div>
 
 </section>
 
-
+<!-- BOTTOM NAVIGATION -->
 <nav class="bottom">
 
-    <div class="item active">
-        <i class="fa-solid fa-border-all"></i>
-        <p>Dashboard</p>
+    <div class="nav active">
+        <div>🏠</div>
+        <span>Dashboard</span>
     </div>
 
-    <div class="item">
-        <i class="fa-regular fa-newspaper"></i>
-        <p>Happenings</p>
+    <div class="nav">
+        <div>📰</div>
+        <span>Happenings</span>
     </div>
 
-    <div class="item">
-        <i class="fa-regular fa-pen-to-square"></i>
-        <p>RMS</p>
+    <div class="nav">
+        <div>📝</div>
+        <span>RMS</span>
     </div>
 
-    <div class="item">
-        <i class="fa-solid fa-list"></i>
-        <p>View Marks</p>
+    <div class="nav">
+        <div>📑</div>
+        <span>View Marks</span>
     </div>
 
 </nav>
