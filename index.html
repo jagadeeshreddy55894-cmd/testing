@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPU Splash</title>
-    <link rel="stylesheet" href="stylish.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loop Video</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:black;
+}
+
+video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+}
+</style>
+
+</head>
 <body>
 
-<div class="splash">
-    <img src="logo.png" class="logo">
-</div>
+<video
+    autoplay
+    muted
+    loop
+    playsinline
+>
+    <source src="video.mp4" type="video/mp4">
+</video>
 
 </body>
 </html>
