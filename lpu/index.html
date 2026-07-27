@@ -10,7 +10,7 @@
     --card-max:500px;
     --card-radius:18px;
     --green: #26a42b;
-    --brown: #7a2d1e;
+    --brown:#4a2e0b;
     --text:#111;
   }
 
@@ -18,7 +18,7 @@
   body{
     margin:0;
     font-family: 'Roboto', sans-serif;
-    background:f3f3f0;
+    background:#f3f3f0;
     color:var(--text);
   }
 
@@ -191,9 +191,9 @@
     font-weight:600;
   }
 
-  .brown-box{
+   .brown-box{
     width:100%;
-    background:#4a2e0b;  
+    background:var(--brown);  
     padding:20px;
     border-bottom-left-radius:var(--card-radius);
     border-bottom-right-radius:var(--card-radius);
@@ -313,7 +313,7 @@
 
     </div>
 
-    <div class="brown-box">
+    <div class="brown-box" id="brownBox">
       <div class="brown-inner">
         <video src="video.mp4" autoplay muted playsinline style="
             width:94%;
@@ -327,6 +327,43 @@
     </div>
 
   </article>
+</div>
+
+<div id="devPanel" style="
+display:none;
+position:fixed;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+z-index:9999;
+">
+
+<h3>Developer Mode</h3>
+
+<input
+id="colorInput"
+placeholder="green or #4a2e0b">
+
+<br><br>
+
+<input
+type="color"
+id="picker">
+
+<br><br>
+
+<button id="applyBtn">
+Apply
+</button>
+
+<button id="closeBtn">
+Close
+</button>
+
 </div>
 
 <script>
@@ -365,6 +402,64 @@ function updateMeal() {
   document.getElementById("mealTitle").textContent = meal;
 }
 updateMeal();
+const brownBox = document.getElementById("brownBox");
+const panel = document.getElementById("devPanel");
+const picker = document.getElementById("picker");
+const input = document.getElementById("colorInput");
+
+let hold;
+
+brownBox.addEventListener("mousedown",()=>{
+    hold=setTimeout(()=>{
+        panel.style.display="block";
+    },5000);
+});
+
+brownBox.addEventListener("mouseup",()=>{
+    clearTimeout(hold);
+});
+
+brownBox.addEventListener("mouseleave",()=>{
+    clearTimeout(hold);
+});
+
+brownBox.addEventListener("touchstart",()=>{
+    hold=setTimeout(()=>{
+        panel.style.display="block";
+    },5000);
+});
+
+brownBox.addEventListener("touchend",()=>{
+    clearTimeout(hold);
+});
+
+
+picker.addEventListener("input",function(){
+
+    document.documentElement.style
+    .setProperty("--brown",this.value);
+
+});
+
+document.getElementById("applyBtn")
+.onclick=function(){
+
+    let c=input.value.trim();
+
+    if(c!="")
+        document.documentElement
+        .style.setProperty("--brown",c);
+
+    panel.style.display="none";
+
+};
+
+document.getElementById("closeBtn")
+.onclick=function(){
+
+    panel.style.display="none";
+
+};
 </script>
 
 </body>
