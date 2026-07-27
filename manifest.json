@@ -1,7 +1,9 @@
 {
   "name": "My Video App",
   "short_name": "Video",
-  "start_url": "./",
+  "id": "/testing/",
+  "start_url": "/testing/",
+  "scope": "/testing/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
