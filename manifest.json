@@ -1,6 +1,6 @@
 {
-  "name": "Splash Screen",
-  "short_name": "Splash",
+  "name": "LPU Touch",
+  "short_name": "LPU Touch",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
